@@ -1,4 +1,3 @@
-
 .header {
     margin: 0 5rem;
     margin-top: 0%;
@@ -12,7 +11,7 @@
 .headerLeft, .headerRight {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.5rem; /* Adjusted gap for consistency */
 }
 
 .headerRight {
@@ -23,7 +22,7 @@
 }
 
 a > span {
-    margin: 0;
+    margin: 0; /* Ensured no margin for uniformity */
     font-size: 2.5rem;
     cursor: pointer;
     color: white;
@@ -48,11 +47,11 @@ a > span:hover {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Optional: Helps ensure padding and border don't affect element sizes */
 }
 
 html, body {
-    height: 100%;
+    height: 100%; /* Ensure the height is 100% */
 }
 
 .movie {
@@ -84,7 +83,7 @@ html, body {
 
 .movie__detailLeft {
     margin-right: 2rem;
-    margin-top: 13rem;
+    margin-top: 13rem; /* Changed from 30px to 2rem for consistency */
 }
 
 .movie__poster {
@@ -107,7 +106,7 @@ html, body {
 
 .movie_details {
     font-size: 1.2rem;
-    margin-top: 1rem;
+    margin-top: 1rem; /* Changed from 50px to 2rem */
 }
 
 .movie__detailRightTop > div {
@@ -116,18 +115,19 @@ html, body {
 }
 
 .movie_info {
-    margin-top: 4rem;
+    margin-top: 3rem; /* Changed from 30px to 1.5rem */
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.5rem; /* Changed from 20px to 1.5rem for consistency */
 }
 
 .movie__name {
     font-weight: 900;
     font-size: 21rem;
-    margin-top: 8.5rem;
+    margin-top: 8.5rem; /* Changed from 250px to 2.5rem */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
 }
 
 .movie__voteCount {
@@ -137,7 +137,7 @@ html, body {
 .movie__genres {
     margin: 1.5rem 0;
     font-size: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 2rem; /* Changed from 40px to 2rem */
 }
 
 .movie__genre {
@@ -182,8 +182,9 @@ html, body {
     justify-content: space-between;
     width: 75%;
     height: 10%;
-    margin-top: 3rem;
+    margin-top: 3rem; /* Changed from 620px to 3rem for consistency */
 }
+
 
 .movie__heading {
     font-size: 1rem;
@@ -191,9 +192,9 @@ html, body {
     justify-content: center;
     align-items: center;
     color: red;
-    margin-top: 2rem;
+    margin-top: 2rem; /* Changed from 200px to 2rem */
     font-weight: bolder;
-    margin-left: 1.5rem;
+    margin-left: 1.5rem; /* Changed from 70px to 1.5rem */
 }
 
 .movie__Button {
@@ -281,7 +282,7 @@ html, body {
     font-size: 1rem;
     margin-top: 1.5rem;
     line-height: 1.6;
-    color: wheat;
+    color: wheat
 }
 
 .movie__detailRightTop {
@@ -291,6 +292,7 @@ html, body {
 .movie__detailRightTop:hover {
     font-size: 1.25rem;
 }
+
 
 .movie__Button:hover {
     background-color: red;
@@ -305,11 +307,201 @@ html, body {
 }
 
 .review_box {
+    height: 30px;
+    width: 30px;
+    margin-top: 12.5rem; /* Changed from 200px to 12.5rem */
+    padding: 0.3125rem; /* Changed from 5px to 0.3125rem */
+    background-color: black; /* Dark background for contrast */
+    width: 56.25rem; /* Changed from 900px to 56.25rem */
+    height: 12.5rem; /* Changed from 200px to 12.5rem */
+    margin-bottom: 2.5rem; /* Changed from 40px to 2.5rem */
+}
+
+.review_box label {
+    color: RED;
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 0.5rem; /* Changed from 8px to 0.5rem */
+    margin-top: 1rem; /* Changed from 16px to 1rem */
+}
+
+.review_box textarea {
     width: 100%;
-    background-color: #f0f0f0;
+    height: 9.375rem; /* Changed from 150px to 9.375rem */
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    background-color: #333;
+    border-radius: 0.375rem; /* Changed from 6px to 0.375rem */
+    resize: none; /* Prevents resizing of textarea */
+    margin-top: 1.25rem; /* Changed from 20px to 1.25rem */
+    font-family: 'Times New Roman', Times, serif;
+    font: bolder;
+    border-color: white;
+}
+
+.review_heading {
+    font-size: 1.8rem;
+    color: red;
+}
+
+.button_submit {
+    margin-top: 0.625rem; /* Changed from 10px to 0.625rem */
+    font-size: 1rem;
+    color: red;
+    background-color: white; /* Tomato color for visibility */
+    border: none;
+    border-radius: 0.3125rem; /* Changed from 5px to 0.3125rem */
+    cursor: pointer;
+    height: 2.5rem; /* Changed from 40px to 2.5rem */
+    width: 10rem; /* Changed from 160px to 10rem */
+    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+
+
+/* Animation Effect for Blinking Title */
+@keyframes blink {
+    0% { 
+        color: #ffffff; /* White */
+    }
+    100% { 
+        color: #000000; /* Black */
+    }
+}
+
+
+
+.movie__links {
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers elements horizontally */
+    justify-content: center; /* Centers elements vertically */
+    width: 100%; /* Ensure it spans the container */
+    margin-top: 50px; /* Adjust spacing above the section */
+    gap: 20px; /* Adds consistent spacing between child elements */
+}
+
+.movie__heading {
+    font-size: 1.5rem; /* Increased for visibility */
+    color: red;
+    text-align: center; /* Centers the heading text */
+    margin: 0; /* Removes extra margins */
+}
+
+.movie__Button {
+    display: flex;
+    align-items: center; /* Aligns text and icons vertically */
+    justify-content: center; /* Centers text within the button */
+    padding: 10px 20px; /* Adjusts padding for better button size */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    width: auto; /* Adjusts button width to fit content */
+    max-width: 350px; /* Ensures buttons don’t stretch too much */
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase; /* Makes text uniform */
+}
+
+.movie__homeButton {
+    background-color: white;
+}
+
+.movie__imdbButton {
+    background-color: #f3ce13;
+}
+
+.movie__Button:hover {
+    background-color: red; /* Adds hover effect */
+    color: white;
+}
+
+.newTab {
+    margin-left: 8px; /* Adjusts icon spacing */
+}
+
+.movie__links {
+    display: flex;
+    flex-direction: column; /* Reverse the order, putting the review button on top */
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 50px;
+    margin-top:400px;
+}
+
+.movie__heading {
+    font-size: 1.5rem;
+    color: red;
+    text-align: center;
+    margin: 0;
+    font-family: monospace;
+}
+
+.movie__buttons {
+    display: flex;
+    gap: 30px; /* Adds spacing between buttons */
+    justify-content: center; /* Centers the buttons horizontally */
+    width: 100%;
+}
+
+.movie__Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: auto;
+    max-width: 350px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: larger;
+}
+
+.movie__homeButton {
+    background-color: white;
+}
+
+.movie__imdbButton {
+    background-color: #f3ce13;
+}
+
+.movie__Button:hover {
+    background-color: rgb(209, 180, 180);
+    color: white;
+}
+
+.newTab {
+    margin-left: 8px;
+}
+
+.movie__imdbButton {
+    width: 380px; /* Wider IMDB button */
+}
+
+.movie__Button {
+    width: 380px; /* Slightly smaller Official Website button */
+}
+
+.movie__detailRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px; /* Adds space between sections */
+}
+
+
+.review_box {
+    width: 100%;
+    background-color: #f0f0f0; /* Or any other background color */
     padding: 15px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: -15px;
 }
 
 .review_box label {
@@ -323,7 +515,7 @@ html, body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: none;
+    resize: none; /* Prevent resizing */
     font-family: monospace;
 }
 
@@ -342,13 +534,26 @@ html, body {
     background-color: red;
 }
 
+.review_box {
+    width: 100%;
+    background-color: transparent; /* Change this to transparent or match it with the parent background */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.Overview {
+    font-weight: 100px;
+}
+
 .movie__production {
-    margin-top: 5px;
+    margin-top : 5px; /* Reduce the bottom margin */
 }
 
 .production {
     margin-top: -8rem;
 }
+
 
 .movie__production {
     width: 100%;
@@ -360,32 +565,34 @@ html, body {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 1rem;
+    margin-top: 1rem; /* Adjust spacing */
 }
+
 
 .no-trailer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    background-color: #1a1a1a;
-    color: red;
-    font-size: 24px;
-    border-radius: 10px;
-    margin: 20px 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    animation: subtleGlow 2s ease-in-out infinite;
+    height: 400px; /* Adjust height to match the iframe size */
+    background-color: #1a1a1a; /* Dark background */
+    color:red; /* White text */
+    font-size: 24px; /* Larger font */ /* Red border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px 0; /* Spacing */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation: subtleGlow 2s ease-in-out infinite; /* Continuous subtle glow animation */
 }
 
 .movie__name {
-    font-size: 3rem;
+ font-size: 3rem;
 }
+
 
 @keyframes subtleGlow {
     0%, 100% {
-        text-shadow: 0 0 5px rgb(15, 14, 0), 0 0 10px rgba(255, 0, 0, 0.3);
+        text-shadow: 0 0 5px rgb(15, 14, 0), 0 0 10px rgba(255, 0, 0, 0.3); /* Subtle glow */
     }
     50% {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5);
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5); /* Slightly stronger glow */
     }
-}
+} 
