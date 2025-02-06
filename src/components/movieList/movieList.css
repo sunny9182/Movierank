@@ -1,5 +1,6 @@
 .movie__list {
-    padding: 0 3rem 3rem 3rem;
+    padding: 0 3rem 3rem;
+    margin-top: -2rem;
 }
 
 .list__cards {
@@ -23,7 +24,7 @@
     }
 
     .movie__list {
-        padding: 0 1rem 3rem 1rem;
+        padding: 0 1rem 3rem;
     }
 
     .list__cards {
@@ -40,7 +41,7 @@
     display: flex;
     justify-content: center;
     font-weight: bolder;
-    margin-top: 75px;
+    margin-top: 4.6875rem; /* 75px → rem */
     animation: blinkAnimation 3s ease-in-out infinite, shake 3s ease-in-out infinite alternate;
 }
 
@@ -49,7 +50,7 @@
 }
 
 @keyframes shake {
-    0% { transform: translateX(-55px); }
-    50% { transform: translateX(0px); }
-    100% { transform: translateX(55px); }
+    0% { transform: translateX(-3.4375rem); } /* -55px → rem */
+    50% { transform: translateX(0rem); }
+    100% { transform: translateX(3.4375rem); } /* 55px → rem */
 }

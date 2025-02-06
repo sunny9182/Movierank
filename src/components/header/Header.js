@@ -12,7 +12,7 @@ const Header = () => {
                 </Link>
             </div>
             <div className="headerRight">
-                {['TRENDING', 'POPULAR', 'TOP-RATED', 'UPCOMING'].map((text, index) => (
+                {['NOW_PLAYING', 'POPULAR', 'TOP_RATED', 'UPCOMING'].map((text, index) => (
                     <Link key={index} to={`/movies/${text.toLowerCase().replace(/ /g, "_")}`} style={{ textDecoration: "none" }}>
                         <span>{text}</span>
                     </Link>

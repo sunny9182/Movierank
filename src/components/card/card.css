@@ -1,39 +1,43 @@
 .cards {
     display: inline-block;
-    transition: transform .2s;
+    transition: transform 0.2s;
     position: relative;
-    border-radius: 10px;
+    border-radius: 0.625rem; /* 10px -> rem */
     overflow: hidden;
     margin: 0.19rem;
     cursor: pointer;
-    min-width: 200px;
-    height: 300px;
+    min-width: 12.5rem; /* 200px -> rem */
+    height: 18.75rem; /* 300px -> rem */
     z-index: 0;
-    border: 1px solid rgb(99, 99, 99);
+    border: 0.063rem solid rgb(99, 99, 99); /* 1px -> rem */
 }
 
 .cards:hover {
     transform: scale(1.2);
     z-index: 1000;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3.375rem 3.4375rem,
+        rgba(0, 0, 0, 0.12) 0px -0.75rem 1.875rem,
+        rgba(0, 0, 0, 0.12) 0px 0.25rem 0.375rem,
+        rgba(0, 0, 0, 0.17) 0px 0.75rem 0.8125rem,
+        rgba(0, 0, 0, 0.09) 0px -0.1875rem 0.3125rem;
 }
 
 .cards__img {
-    height: 300px;
+    height: 18.75rem; /* 300px -> rem */
 }
 
 .cards__overlay {
     position: absolute;
     padding: 0 1rem 1rem 1rem;
-    bottom: 0px;
-    height: 290px;
+    bottom: 0;
+    height: 18.125rem; /* 290px -> rem */
     display: flex;
     flex-direction: column;
     width: 85%;
     justify-content: flex-end;
     background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
 }
 
 .cards__overlay:hover {
@@ -47,7 +51,7 @@
 }
 
 .card__runtime {
-    font-size: .75rem;
+    font-size: 0.75rem;
     margin-bottom: 0.25rem;
 }
 
@@ -57,6 +61,6 @@
 
 .card__description {
     font-style: italic;
-    font-size: .75rem;
+    font-size: 0.75rem;
     margin-bottom: 0.25rem;
 }

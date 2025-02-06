@@ -5,7 +5,7 @@
 }
 
 .header {
-    margin: 0 5rem;
+    margin: 0 5rem; /* Kept rem for scalable margins */
     padding: 2rem 0;
     display: flex;
     justify-content: space-between;
@@ -18,35 +18,35 @@
     align-items: center;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: clamp(24px, 5vw, 70px); 
+    font-size: clamp(1.5rem, 5vw, 4.375rem); /* 24px -> 1.5rem, 70px -> 4.375rem */
 }
 
 .headerRight > a > span {
-    margin: 0 15px;
+    margin: 0 0.9375rem; /* 15px -> rem */
     text-decoration: none;
     color: red;
-    font-size: clamp(18px, 2.5vw, 2.8rem);
+    font-size: clamp(1.125rem, 2.5vw, 2.8rem); /* 18px -> rem */
     cursor: pointer;
     animation: subtleGlow 2s ease-in-out infinite;
     transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .headerRight > a > span:hover {
-    font-size: clamp(22px, 4vw, 4rem);
+    font-size: clamp(1.375rem, 4vw, 4rem); /* 22px -> rem */
     color: wheat;
     transform: scale(1.2);
 }
 
 .headerRight > a:hover ~ a > span {
-    transform: translateX(20px);
+    transform: translateX(1.25rem); /* 20px -> rem */
 }
 
 @keyframes subtleGlow {
     0%, 100% {
-        text-shadow: 0 0 5px rgb(15, 14, 0), 0 0 10px rgba(255, 0, 0, 0.3);
+        text-shadow: 0 0 0.3125rem rgb(15, 14, 0), 0 0 0.625rem rgba(255, 0, 0, 0.3); /* 5px, 10px -> rem */
     }
     50% {
-        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.5);
+        text-shadow: 0 0 0.625rem rgba(255, 0, 0, 0.8), 0 0 1.25rem rgba(255, 0, 0, 0.5); /* 10px, 20px -> rem */
     }
 }
 
@@ -60,8 +60,8 @@
 }
 
 .header__icon {
-    height: 110px;
-    width: 290px;
+    height: 6.875rem; /* 110px -> rem */
+    width: 18.125rem; /* 290px -> rem */
     cursor: pointer;
     animation: pulse 5s ease-in-out infinite;
 }

@@ -34,6 +34,7 @@ const StarRating = ({ onRate, resetRating }) => {
                         onClick={handleClick}
                         onMouseLeave={() => setHoverRating(rating)}
                     >
+                        <div className="stars">
                         <i
                             className="fas fa-star"
                             style={{
@@ -45,6 +46,7 @@ const StarRating = ({ onRate, resetRating }) => {
                                         : "#ccc",
                             }}
                         />
+                        </div>
                     </div>
                 ))}
             </div>

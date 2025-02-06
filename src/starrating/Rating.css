@@ -2,24 +2,24 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 22rem; /* Adjusted gap to a smaller value */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
-    margin-top: -10px;
+    font-size: 2rem; /* You can adjust this to make the entire rating text bigger */
+    margin-top: -1rem;
 }
 
 .stars {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem; /* Adjusted to 1rem */
     animation: blink 1.5s infinite;
 }
 
 .star {
     position: relative;
-    width: 60px;
-    height: 30px;
-    font-size: 40px;
+    width: 4rem; /* Increased from 4rem to 6rem for bigger stars */
+    height: 4rem; /* Increased from 4rem to 6rem for bigger stars */
+    font-size: 4rem; /* Increased from 2.5rem to 4rem for bigger stars */
     cursor: pointer;
     color: white;
 }
@@ -29,14 +29,23 @@
 }
 
 .rating-text {
-    font-size: 24px;
-    margin-top: 16px;
+    font-size: 2rem; /* Increased font size from 1.5rem to 2.25rem for better readability */
     color: red;
     animation: blink 1.5s infinite;
     font-family: monospace;
+    margin-top: 2.1rem;
 }
 
 @keyframes blink {
     0%, 100% { color: #f5f5f5; }
     50% { color: #ff4747; }
+}
+
+.stars { 
+    height: 6rem; /* Increased height to match the size of the stars */
+    width: 6rem; /* Increased width to match the size of the stars */
+    color: transparent;
+    font-size: 4rem; /* Increased font size to make the stars bigger */
+    display: flex;
+    flex-direction: row;
 }

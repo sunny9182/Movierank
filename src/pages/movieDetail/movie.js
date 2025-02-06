@@ -92,20 +92,20 @@ const Movie = () => {
 
                             <div className="movie_info">
                                 <div className="movie__tagline">
-                                    Tag Line: {currentMovieDetail ? currentMovieDetail.tagline : ""}
+                                    Tag Line : {currentMovieDetail ? currentMovieDetail.tagline : ""}
                                 </div>
                                 <div className="movie__rating">
-                                    RATED: {currentMovieDetail ? currentMovieDetail.vote_average : ""}
+                                    RATED : {currentMovieDetail ? currentMovieDetail.vote_average : ""}
                                     <i className="fas fa-star" />
                                     <span className="movie__voteCount">
                                         {currentMovieDetail ? `(${currentMovieDetail.vote_count}) Reviews` : ""}
                                     </span>
                                 </div>
                                 <div className="movie__runtime">
-                                    DURATION: {currentMovieDetail ? `${currentMovieDetail.runtime} min` : ""}
+                                    DURATION : {currentMovieDetail ? `${currentMovieDetail.runtime} min` : ""}
                                 </div>
                                 <div className="movie__releaseDate">
-                                    {currentMovieDetail ? `RELEASE DATE: ${currentMovieDetail.release_date}` : ""}
+                                    {currentMovieDetail ? `RELEASE DATE : ${currentMovieDetail.release_date}` : ""}
                                 </div>
                             </div>
                         </div>
@@ -146,60 +146,60 @@ const Movie = () => {
                 </div>
             </div>
 
-            <div className="movie__links">
-                <div className="movie__heading">FOR MORE INFORMATION</div>
-                <div className="movie__buttons">
-                    {currentMovieDetail?.homepage && (
-                        <a 
-                            href={currentMovieDetail.homepage} 
-                            target="_blank" 
-                            rel="noreferrer" 
-                            style={{ textDecoration: "none" }}
-                        >
-                            <p>
-                                <span className="movie__homeButton movie__Button white-button">
-                                    OFFICIAL WEBSITE<i className="newTab fas fa-external-link-alt"></i>
-                                </span>
-                            </p>
-                        </a>
-                    )}
+         {/* Movie Links */}
+<div className="movie__links">
+    <div className="movie__heading">FOR MORE INFORMATION</div>
+    <div className="movie__buttons">
+        {currentMovieDetail?.homepage && (
+            <a 
+                href={currentMovieDetail.homepage} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="movie__link"
+            >
+                <span className="movie__homeButton movie__Button">
+                    OFFICIAL WEBSITE <i className="newTab fas fa-external-link-alt"></i>
+                </span>
+            </a>
+        )}
 
-                    {currentMovieDetail?.imdb_id && (
-                        <a 
-                            href={`https://www.imdb.com/title/${currentMovieDetail.imdb_id}`} 
-                            target="_blank" 
-                            rel="noreferrer" 
-                            style={{ textDecoration: "none" }}
-                        >
-                            <p>
-                                <span className="movie__imdbButton movie__Button">
-                                    IMDB RATING<i className="newTab fas fa-external-link-alt"></i>
-                                </span>
-                            </p>
-                        </a>
-                    )}
-                </div>
-            </div>
+        {currentMovieDetail?.imdb_id && (
+            <a 
+                href={`https://www.imdb.com/title/${currentMovieDetail.imdb_id}`} 
+                target="_blank" 
+                rel="noreferrer" 
+                className="movie__link"
+            >
+                <span className="movie__imdbButton movie__Button">
+                    IMDB RATING <i className="newTab fas fa-external-link-alt"></i>
+                </span>
+            </a>
+        )}
+    </div>
+</div>
 
-            <div className="production">
-                <div className="production_by">PRODUCED BY</div>
-                <div className="movie__production">
-                    {currentMovieDetail?.production_companies?.map((company) => (
-                        company.logo_path && (
-                            <span className="productionCompanyImage" key={company.id}>
-                                <img
-                                    className="movie__productionComapany"
-                                    src={`https://image.tmdb.org/t/p/original${company.logo_path}`}
-                                    alt={company.name}
-                                />
-                                <span>{company.name}</span>
-                            </span>
-                        )
-                    ))}
-                </div>
-            </div>
+{/* Production */}
+<div className="production">
+    <div className="production_by">PRODUCED BY</div>
+    <div className="movie__production">
+        {currentMovieDetail?.production_companies?.map((company) => (
+            company.logo_path && (
+                <span className="productionCompanyImage" key={company.id}>
+                    <img
+                        className="movie__productionCompany"
+                        src={`https://image.tmdb.org/t/p/original${company.logo_path}`}
+                        alt={company.name}
+                    />
+                    <span>{company.name}</span>
+                </span>
+            )
+        ))}
+    </div>
+</div>
+
         </div>
     );
 };
 
 export default Movie;
+
