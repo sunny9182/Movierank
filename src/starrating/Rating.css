@@ -1,0 +1,42 @@
+.star-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: blink 1.5s infinite;
+}
+
+.star {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+.star:hover {
+    color: red;
+}
+
+.rating-text {
+    font-size: 24px;
+    margin-top: 16px;
+    color: red;
+    animation: blink 1.5s infinite;
+    font-family: monospace;
+}
+
+@keyframes blink {
+    0%, 100% { color: #f5f5f5; }
+    50% { color: #ff4747; }
+}

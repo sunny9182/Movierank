@@ -1,39 +1,43 @@
-import React, {useEffect, useState} from "react"
-import "./movieList.css"
-import { useParams } from "react-router-dom"
-import Cards from "../card/card"
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Cards from "../card/card";
+import "./movieList.css";
 
 const MovieList = () => {
-    
-    const [movieList, setMovieList] = useState([])
-    const {type} = useParams()
+    const { type } = useParams();
+    const [movieList, setMovieList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        getData()
-    }, [])
+        const fetchMovies = async () => {
+            try {
+                const response = await fetch(
+                    `https://api.themoviedb.org/3/movie/${type || "popular"}?api_key=237d88730a8a35f6d677f33e81b36566&language=en-US`
+                );
+                const data = await response.json();
+                setMovieList(data.results);
+            } catch (error) {
+                console.error("Error fetching movies:", error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
 
-    useEffect(() => {
-        getData()
-    }, [type])
-
-    const getData = () => {
-        fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
-        .then(res => res.json())
-        .then(data => setMovieList(data.results))
-    }
+        fetchMovies();
+    }, [type]);
 
     return (
         <div className="movie__list">
-            <h2 className="list__title">{(type ? type : "POPULAR").toUpperCase()}</h2>
+            <h2 className="list__title">{(type || "TRENDING NOW").toUpperCase()}</h2>
             <div className="list__cards">
-                {
-                    movieList.map(movie => (
-                        <Cards movie={movie} />
-                    ))
-                }
+                {isLoading ? (
+                    <p>Loading...</p>
+                ) : (
+                    movieList.map((movie) => <Cards key={movie.id} movie={movie} />)
+                )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default MovieList
+export default MovieList;

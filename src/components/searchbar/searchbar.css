@@ -1,0 +1,128 @@
+/* Search Wrapper */
+.search-wrapper {
+    position: relative;
+    z-index: 1000;
+    margin-top: 80px;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Search Input */
+.search-input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 16px;
+    background-color: black;
+    color: wheat;
+    font-size: 18px;
+    font-family: monospace;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.search-input::placeholder {
+    color: gray;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Search Button */
+.search-button {
+    padding: 12px 20px;
+    background-color: red;
+    border-radius: 6px;
+    color: rgb(8, 8, 8);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.search-button:hover {
+    background-color: wheat;
+    transform: scale(1.05);
+}
+
+/* Search Results Dropdown */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    border: 2px solid #333;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    z-index: 1001;
+    max-height: 300px;
+    overflow-y: auto;
+    color: red;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.movie-result {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease;
+}
+
+.movie-result:last-child {
+    border-bottom: none;
+}
+
+.movie-result:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.movie-link {
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    font-family: monospace;
+}
+
+.movie-link:hover {
+    color: red;
+}
+
+/* Loading State */
+.loading, .error, .no-results {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.loading {
+    color: white;
+}
+
+.error {
+    color: red;
+}
+
+.no-results {
+    color: rgb(251, 8, 8);
+    font-size: 18px;
+}
