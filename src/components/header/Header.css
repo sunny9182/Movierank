@@ -63,5 +63,5 @@
     height: 6.875rem; /* 110px -> rem */
     width: 18.125rem; /* 290px -> rem */
     cursor: pointer;
-    animation: pulse 5s ease-in-out infinite;
+    animation: pulse 12s ease-in-out infinite;
 }

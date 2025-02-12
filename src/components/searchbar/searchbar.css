@@ -145,3 +145,44 @@
         width: 100%;
     }
 }
+
+/* Increase size of search input */
+.search-input {
+    padding: 1rem; /* Increased from 0.75rem */
+    font-size: 1.25rem; /* Increased from 1.125rem */
+    border-radius: 1.25rem; /* Increased for a smoother look */
+}
+
+/* Make the search button bigger */
+.search-button {
+    padding: 1rem 1.5rem; /* Increased padding */
+    font-size: 1.25rem; /* Increased font size */
+    border-radius: 0.5rem; /* Slightly rounded */
+}
+
+/* Make the search container wider */
+.search-container {
+    max-width: 60rem; /* Increased from 50rem */
+}
+
+/* Increase search results size */
+.search-results {
+    font-size: 1.25rem; /* Increased text size */
+    max-height: 25rem; /* Allow more results to be visible */
+}
+
+/* Make movie result text bigger */
+.movie-result {
+    padding: 1rem; /* Increased padding */
+    font-size: 1.25rem;
+}
+
+/* Make movie links bigger */
+.movie-link {
+    font-size: 1.25rem;
+}
+
+/* Make error/no results text bigger */
+.loading, .error, .no-results {
+    font-size: 1.25rem;
+}

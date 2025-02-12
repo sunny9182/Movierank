@@ -9,6 +9,7 @@ const Movie = () => {
     const [reviewText, setReviewText] = useState("");
     const [rating, setRating] = useState(0);
     const [resetRating, setResetRating] = useState(false);
+    const [watchProviders, setWatchProviders] = useState([])
     const { id } = useParams();
 
     useEffect(() => {

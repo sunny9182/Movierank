@@ -185,7 +185,7 @@ a > span:hover {
     justify-content: space-between;
     width: 75%;
     height: 10%;
-    margin-top: 25rem;
+    margin-top: 30rem;
 }
 
 .movie__heading {
@@ -360,3 +360,40 @@ a > span:hover {
         text-shadow: 0 0 0.625rem rgba(255, 0, 0, 0.8), 0 0 1.25rem rgba(255, 0, 0, 0.5);
     }
 }
+
+.reviews-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1.25rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(255, 0, 0, 0.3);
+    color: white;
+}
+
+.reviews-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.review {
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review h3 {
+    color: wheat;
+    font-size: 1.25rem;
+}
+
+.review p {
+    font-size: 1.125rem;
+    color: gray;
+    line-height: 1.5;
+}
+
